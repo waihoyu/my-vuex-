@@ -107,7 +107,7 @@ class Store {
 
     //收集模块
     this.modules = new ModuleCollection(options);
-    console.log(this.modules);
+    // console.log(this.modules);
     installModule(this, this.state, [], this.modules.root);
     // let root = {
     //   _raw: rootModule,
@@ -139,7 +139,7 @@ const install = (_Vue, abc) => {
   Vue = _Vue;
   Vue.mixin({
     beforeCreate() {
-      console.log(this.$options.name);
+      //   console.log(this.$options.name);
       //父组建还是子组件
       if (this.$options && this.$options.store) {
         this.$store = this.$options.store;
@@ -148,6 +148,6 @@ const install = (_Vue, abc) => {
       }
     }
   });
-  console.log("install");
+  //   console.log("install");
 };
 export default { install, Store };
